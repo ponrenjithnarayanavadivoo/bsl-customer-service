@@ -1,12 +1,7 @@
 package com.kastechie.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Customer {
 
     private int id;
@@ -15,7 +10,14 @@ public class Customer {
     private String province;
     private int postalCode;
     private String phoneNumber;
-
+    private LocalDateTime createdDate;
+    
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getCustomerName() {
         return customerName;
     }
@@ -46,6 +48,13 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
 
     
+ 
 }

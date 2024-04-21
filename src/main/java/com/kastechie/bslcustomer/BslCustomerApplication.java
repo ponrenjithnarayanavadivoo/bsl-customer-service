@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @SpringBootApplication
 @EntityScan("com.kastechie.*")  
 public class BslCustomerApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(BslCustomerApplication.class, args);
 	}

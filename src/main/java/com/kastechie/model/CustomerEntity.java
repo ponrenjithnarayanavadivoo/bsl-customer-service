@@ -9,13 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name= "CUSTOMERS") 
 public class 
@@ -36,7 +30,49 @@ CustomerEntity {
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
     @Column(name = "CREATED_DATE")
-    private LocalDateTime createdDate;
+    private LocalDateTime createdDate = LocalDateTime.now();
+    public int getCustomerId() {
+        return customerId;
+    }
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+    public String getCustomerName() {
+        return customerName;
+    }
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public String getProvince() {
+        return province;
+    }
+    public void setProvince(String province) {
+        this.province = province;
+    }
+    public String getPostalCode() {
+        return postalCode;
+    }
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
     
 
 }
